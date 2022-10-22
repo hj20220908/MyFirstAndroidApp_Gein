@@ -28,97 +28,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="아이디" />
+        android:text="보여줄 문구" />
 
     <EditText
+        android:id="@+id/contentEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="이메일 양식으로 입력"
-        android:inputType="textEmailAddress"/>
+        android:hint="아무 문장이나 입력"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="비밀번호" />
-
-    <EditText
+    <Button
+        android:id="@+id/okBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="8글자 이상 입력"
-        android:inputType="textPassword"/>
+        android:text="확인"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="닉네임" />
-
-    <EditText
+        android:id="@+id/resultTxt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="한 줄로 입력"
-        android:singleLine="false"
-        android:imeOptions="actionSearch"/>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="입력한 내용이 나올 자리" />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="남성" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="여성" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:text="공개안함"/>
-
-    </RadioGroup>
-
-<!--
-        // 공개 여부
-        android:visibility="invisible"
-        android:visibility="gone"
--->
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:text="이용약관 동의" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/clickBtn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="확인"/>
-
-            <Button
-                android:id="@+id/smallBtn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="취소"/>
-
-        </LinearLayout>
 
 
 </LinearLayout>
