@@ -31,6 +31,12 @@ class OtherActivity : AppCompatActivity() {
 
         }
 
+        // 목록 보기 버튼 클릭 시
+        listBtn.setOnClickListener {
+            val listIntent = Intent(this, ListVeiwActivity::class.java)
+            startActivity(listIntent)
+        }
+
         // 로그아웃 버튼 클릭 시
         logoutBtn.setOnClickListener {
 
