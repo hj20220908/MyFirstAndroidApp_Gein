@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.example.myfirstandroidapp_gein.R
 import com.example.myfirstandroidapp_gein.datas.Student
 
 /**
  * 목록을 뿌려주는 담당인 Adaper 추가 작업
- * - ArrayAdapter를 상속받아서 기능 활용 예정
+ * ArrayAdapter를 상속받아서 기능 활용 예정
  */
 class StudentAdapter(
     val mContext : Context,
@@ -32,6 +33,14 @@ class StudentAdapter(
 
         // 진짜 row를 만들어서 tempRow가 절대 null이 아니다 라고 하면서 대입.
         val row = tempRow!!
+
+        val studntData = mList[position]
+
+        val nameTxt = row.findViewById<TextView>(R.id.nameTxt)
+        val birthYearTxt = row.findViewById<TextView>(R.id.birthYearTxt)
+
+        nameTxt.text = studntData.name
+        birthYearTxt.text = "(${studntData.birthYear.toString()}년생)"
 
         // 최종적으로 리스트 뷰에 이 row를 뿌려달라고 리턴처리
         return row
